@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Form Practice</title>
+    <style>
+      form {
+        margin: 40px auto;
+        width: 400px;
+        padding: 1rem;
+        border: 1px solid #CCC;
+        border-radius: 1rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+      }
+      form li + li {
+        margin-top: 1rem;
+      }
+
+      label {
+        display: inline-block;
+        width: 80px;
+        padding: auto 10px;
+      }
+
+      input, 
+      textarea {
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid#999;
+      }
+      
+      input:focus, textarea:focus {
+        border-color: rgb(80, 182, 207);
+      }
+      textarea {
+        vertical-align: top;
+        height: 5em;
+      }
+      .button {
+        padding-left: 90px;
+        display: inline-block;
+      }
+      button {
+        margin-left: .3rem;
+        padding: 5px 20px;
+        
+      }
+
+      fieldset {
+        margin: 40px auto;
+        width: 400px;
+        padding: 1rem;
+        border: 1px solid #CCC;
+        border-radius: 1rem; 
+      }
+    </style>
+  </head>
+  <body>
+    <h4>This page acts as a way for me to test forms, and how to utilise various input types</h4>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+
+          <!-- NAME -->
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+            </li>
+
+          <!-- EMAIL -->
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_email">
+            </li>
+
+            <!-- PASSWORD -->
+            <li>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd">
+            </li>
+
+          <!-- MESSAGE -->
+            <li>
+                <label for="msg">Message:</label>
+                <textarea name="user_message" id="msg" cols="30" rows="10"></textarea>
+            </li>
+
+          <!-- SUBMIT A FILE -->
+            <li>
+              <label for="file">File:</label>
+              <input type="file" name="file" id="file" accept="image/*" multiple>
+            </li>
+
+          <!-- RESET A FORM -->
+            <li class="button">
+                <button type="reset">
+                   Reset
+                </button>
+            </li>
+
+          <!-- SUBMIT A FORM -->
+            <li class="button">
+                <button type="submit">
+                  Submit
+                </button>
+            </li>
+
+            <!-- SUBMIT A FORM THROUGH AN IMAGE -->
+            <!-- <li class="button">
+              <input type="image" alt="Click me!" src="my-img.png" width="80" height="30">
+            </li>  -->
+
+        </ul>
+    </form>
+    <fieldset>
+      <legend>Choose all the vegetables you like to eat</legend>
+      <ul>
+        <li>
+          <label for="carrots">Carrots</label>
+          <input type="checkbox" id="carrots" name="vegetable" value="carrots">
+        </li>
+        <li>
+          <label for="peas">Peas</label>
+          <input type="checkbox" id="peas" name="vegetable" value="peas">
+        </li>
+        <li>
+          <label for="cabbage">Cabbage</label>
+          <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Choose your preferred colour</legend>
+      <ul>
+        <li>
+          <label for="soup">Red</label>
+          <input type="radio" id="soup" name="meal">
+        </li>
+        <li>
+          <label for="blue">Blue</label>
+          <input type="radio" id="blue" name="meal">
+        </li>
+        <li>
+          <label for="green">Green</label>
+          <input type="radio" id="green" name="meal">
+        </li>
+        <li>
+          <label for="gold">Gold</label>
+          <input type="radio" id="gold" name="meal">
+        </li>
+      </ul>
+    </fieldset>
+  </body>
+</html>
